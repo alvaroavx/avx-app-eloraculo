@@ -1,0 +1,72 @@
+/**
+* cssMenu:
+* estilos del constructMenu
+*/
+
+
+
+@media(min-width: 768px) {
+    /* Contenido Left Col */
+    #sidebar {
+        position: relative;
+        overflow: hidden;
+        display: block;
+    }
+    /** footer del left col **/
+    #bottomrow {
+        position: fixed;
+        bottom: 0;
+        width: inherit;
+        overflow: hidden;
+    }
+}
+@media(max-width: 768px){
+    #sidebar {
+        display: none;
+    }
+    #bottomrow {
+        display: none;
+    }
+}
+.menuoption {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    border-top-right-radius: 25px;
+    border-bottom-right-radius: 25px;
+    margin-top: 4px;
+    margin-bottom: 4px;
+}
+.menuoption:hover,
+.menuoption:focus {
+    background-color: lightgoldenrodyellow;
+}
+.menuoption:active,
+.menuoption.active  {
+
+}
+.menuoption .icon {}
+.menuoption .label {
+    font-size: 16px;
+}
+#sidebar hr {
+    margin: 0px;
+}
+
+
+
+#contactrow {}
+
+/************************************/
+/*              MEDIA               */
+/************************************/
+@media(min-width: 1200px) and (max-width: 1600px) {
+}
+@media(min-width: 992px) and (max-width: 1200px) {
+}
+@media(min-width: 768px) and (max-width: 992px){
+}
+@media(max-width: 768px){
+}
+@media(max-width: 450px) {
+}

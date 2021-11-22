@@ -1,0 +1,87 @@
+/*
+ Searcher CSS: Estilos del buscador
+ elOraculo 2018 Steins
+ @AlvaxVargas @Njong
+*/
+
+/* Contenedor general */
+#searchrow{
+    height: 100%;
+    width: 80%;
+    overflow: hidden;
+    padding: 7px 0;
+}
+
+#searchcontainer {
+    display: flex;
+    align-items: center;
+    border: 1px solid lightgray;
+    min-width: 400px;
+    border-radius: 5px;
+    padding-left: 5px;
+    padding-right: 25px;
+}
+#searchcontainer:active,
+#searchcontainer:hover,
+#searchcontainer:focus {
+    background-color: white;
+}
+/* Icono de búsqueda */
+#searchcontainer .icon {
+    margin: 0;
+}
+
+/* Buscador */
+#searcher {
+    width: 100%;
+}
+#searcher input {
+    background: none;
+    font-size: 14px;
+    width: 100%;
+}
+#searcher input::placeholder {
+    color: black;
+}
+#searcher input:active::placeholder,
+#searcher input:hover::placeholder,
+#searcher input:focus::placeholder {
+    color: gray;
+}
+
+#submit_searchrow{
+    position: absolute;
+    width: 40px;
+    height: 100%;
+    background-size: 30px;
+    cursor: pointer;
+    right: 0;
+    top: 0;
+}
+
+/* Seccion de sugerencias del buscador */
+#suggesttab{
+    position: absolute;
+    background: white;
+    z-index: 9;
+    top: 45px;
+    border: 1px solid lightgray;
+    border-top: 0px;
+    display: none;
+    overflow: hidden;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+}
+.item_suggesttab{
+    padding: 10px 20px;
+    max-height: 40px;
+    overflow: hidden;
+    line-height: 17px;
+    cursor: pointer;
+}
+.item_suggesttab.item_focus,
+.item_suggesttab:hover,
+.item_suggesttab:focus,
+.item_suggesttab:active{
+    background: lightgray;
+}

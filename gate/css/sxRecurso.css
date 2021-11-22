@@ -1,0 +1,76 @@
+/*
+ Recursos CSS
+ Estilos de los recursos: listas, categorias y etiquetas
+ elOraculo 2018 Steins
+ @AlvaxVargas @Njong
+*/
+
+/* Etiquetas */
+/* Vista general */
+#tagscontainer {
+    margin-bottom: 20px;
+}
+#tags {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+.tag {
+    width: fit-content;
+    padding: 5px 10px;
+    border: 1px solid var(--color-etiqueta);
+    border-radius: 5px;
+    background-color: var(--color-etiqueta);
+    margin: 2px;
+    flex: 0 0 auto;
+    font-size: 13px;
+}
+.tag:active,
+.tag:focus,
+.tag:hover {
+    background-color: rgba(230, 238, 255, 0.5);
+    font-weight: bold;
+}
+/* Vista de edicion de etiquetas del Neodoc */
+#etiquetas {
+
+}
+#existentes {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+}
+#existentes .tag {
+    font-size: 11px;
+    position: relative;
+}
+#existentes .tag:active,
+#existentes .tag:focus,
+#existentes .tag:hover {
+    border-color: black;
+    background-color: var(--color-etiqueta);
+    font-weight: normal;
+}
+#existentes .tag .nombre {}
+
+#existentes .tag .close {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 0;
+    display: none;
+}
+#existentes .tag:active > .close,
+#existentes .tag:focus > .close,
+#existentes .tag:hover > .close {
+    display: block;
+}
+#nuevos {
+    padding: 5px;
+    margin: 5px;
+    font-size: 11px;
+    width: 100%;
+}

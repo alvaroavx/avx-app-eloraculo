@@ -1,0 +1,320 @@
+/*
+ CHAT CSS: Estilos de los Neo Documentos
+ elOraculo 2018 Steins
+ @AlvaxVargas
+*/
+
+/**
+    Dashboard
+ */
+#neodocs {
+    display: flex;
+    align-items: center;
+    overflow-x: scroll;
+    padding-bottom: 5px;
+    margin-top: 10px;
+    margin-bottom: 20px;
+    height: 230px;
+}
+.neodoc {
+    min-width: 180px;
+    height: 200px;
+    background-color: black;
+    margin: 0px 10px;
+    cursor: pointer;
+    color: white;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    position: relative;
+}
+.neodoc.item_focus,
+.neodoc:active,
+.neodoc:hover,
+.neodoc:focus {
+    transform: scale(1.1);
+}
+.neodoc:first-child {
+    margin-left: 0px;
+}
+.neodoc:last-child {
+    margin-right: 0px;
+}
+.neodoc div {
+    left: 50%;
+    transform: translateX(-50%);
+    width: 90%;
+}
+.neodoc .titulo {
+    font-size: 23px;
+    position: absolute;
+    top: 10px;
+}
+.neodoc .fecha {
+    font-style: italic;
+    position: absolute;
+    bottom: 10px;
+}
+
+/* Vista del Neodoc */
+#neodocrow {
+    position: relative;
+    width: 100%;
+    height: calc(100vh - 120px);
+    overflow: auto;
+}
+/* Indice */
+#neoindex {
+    width: fit-content;
+    position: absolute;
+    left: 0px;
+    top: 0px;
+}
+@media(min-width: 768px) {}
+@media(max-width: 768px){
+    #neoindex {
+        display: none;
+    }
+}
+#indexbtn {
+
+}
+#indexbody {
+    padding: 10px 15px;
+    border-right: 1px solid rgba(0, 0, 0, 0.1);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+    display: none;
+}
+#indexbody.pinned {
+    display: block;
+}
+#indexcontent {
+
+}
+.th1 {
+    font-size: 16px;
+    margin-top: 5px;
+}
+.th2 {
+    font-size: 14px;
+    margin-left: 15px;
+}
+/* NEODOC Vista Lectura */
+#neodoc {
+    min-height: calc(100vh - 170px);
+}
+#neodoc div.title,
+#neodoc input.title {
+    font-size: 24px;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+    padding: 10px;
+    text-align: center;
+    width: 100%;
+    height: 52px;
+}
+#neodoc input.title {
+    background-color: var(--color-fondo-gris);
+}
+#neodoc input.title::placeholder {
+    color: gray;
+}
+#neodoc .body {
+    max-width: 1000px;
+    padding: 20px 30px;
+    margin: 0px auto;
+}
+#neodoc .body.index {
+    margin: 0px;
+    max-width: 100%;
+}
+#neodoc .code {
+    padding: 5px 10px;
+    overflow: auto;
+    color: #6a737d;
+    border-left: 4px solid var(--color-principal);
+    border-radius: 0;
+    background-color: #f6f8fa;
+
+}
+#neodoc code {
+    font-family: UbuntuMono;
+    font-size: 13px;
+    line-height: 2;
+}
+#neodoc ol,
+#neodoc ul {
+    padding-left: 40px;
+}
+#neodoc li{
+    list-style: inherit;
+    padding: 0;
+}
+#neodoc td,
+#neodoc tr {
+    border: 1px solid black;
+}
+/* Vista Edicion */
+#neodoc.edit {
+    background-color: var(--color-fondo-gris);
+    -webkit-box-shadow: 1px 1px 1px 1px rgba(50, 50, 50, 0.45);
+    -moz-box-shadow:    1px 1px 1px 1px rgba(50, 50, 50, 0.45);
+    box-shadow:         1px 1px 1px 1px rgba(50, 50, 50, 0.45);
+    min-height: calc(100vh - 120px);
+}
+
+#neodoc .title:empty:not(:focus):before{
+    content:attr(data-text)
+}
+#neodoc .body:empty:not(:focus):before{
+    content:attr(data-text)
+}
+
+
+/* Columna de la derecha */
+#neoinfo {
+    display: flex;
+    flex-direction: column;
+}
+@media(min-width: 768px) {}
+@media(max-width: 768px){
+    #neoinfo {
+        display: none;
+    }
+}
+#social {
+    padding-top: 5px;
+    padding-bottom: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    border-left: 1px solid rgba(0, 0, 0, 0.1);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+#detail {
+    padding: 10px 15px;
+    border-left: 1px solid rgba(0, 0, 0, 0.1);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+#detail .metadata {
+    margin-bottom: 10px;
+}
+#detail .field {
+    font-size: 13px;
+}
+#detail .value {
+    font-size: 16px;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+#detail .value select,
+#detail .value input,
+#detail .value textarea {
+    background-color: #EEEEEE;
+    border: 1px solid #EEEEEE;
+    padding: 5px 10px;
+    cursor: text;
+    width: 100%;
+}
+#detail .value select {
+    -webkit-appearance: menulist;
+    cursor: pointer;
+}
+#detail .value select:active,
+#detail .value select:focus,
+#detail .value select:hover,
+#detail .value input:active,
+#detail .value input:focus,
+#detail .value input:hover,
+#detail .value textarea:active,
+#detail .value textarea:focus,
+#detail .value textarea:hover {
+    background: white;
+}
+#detail .value .etiquetas {
+    background-color: #EEEEEE;
+    border: 1px solid #EEEEEE;
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    padding: 0;
+}
+#detail .value #tags {
+    padding: 0;
+}
+#detail .value #tags .tag {
+    font-size: 11px;
+}
+#permissions {
+     padding: 10px 15px;
+     border-left: 1px solid rgba(0, 0, 0, 0.1);
+     border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+#permissions .metadata {
+    display: flex;
+}
+#permissions .field {
+    font-size: 13px;
+}
+#permissions .value {
+    font-size: 13px;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+#permissions .btn-container {
+    padding: 5px 15px;
+    margin-top: 5px;
+}
+#permissions .btn-container .icon.labeled {
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    margin: 0 auto;
+    padding: 3px 15px 3px 10px;
+}
+#activities {
+    padding: 10px 15px;
+    border-left: 1px solid rgba(0, 0, 0, 0.1);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+#related {
+    padding: 10px 15px;
+    border-left: 1px solid rgba(0, 0, 0, 0.1);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+/* Neodocs anclados al top bar */
+#anchors {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    overflow: overlay;
+}
+.neoanchor {
+    min-width: fit-content;
+    max-height: 30px;
+    position: relative;
+    margin-right: 10px;
+    border-left: 1px solid rgba(0, 0, 0, 0.1);
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
+    border-right: 1px solid rgba(0, 0, 0, 0.1);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+.neoanchor:active,
+.neoanchor:focus,
+.neoanchor:hover {
+    background-color: #EEEEEE;
+}
+.neoanchor .title {
+    font-size: 12px;
+    padding: 5px 10px;
+}
+.neoanchor .close {
+    position: absolute;
+    display: none;
+    right: -10px;
+    top: -10px;
+}
+.neoanchor:active > .close,
+.neoanchor:hover > .close,
+.neoanchor:focus > .close{
+    display: block;
+}
